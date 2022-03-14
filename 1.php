@@ -26,6 +26,7 @@ echo "\n";
 echo "\n";
 echo "| ALFAGIFT AKUN GENERATOR!! \n";
 echo "| Bismillah , \n";
+echo "| Gak Usah bayar Gratis gawe Nawak ewed \n";
 echo "| Salam Sukses \n";
 echo "| DNS PUSAT \n";
 echo "| --------------------------- \n";
