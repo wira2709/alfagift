@@ -45,7 +45,7 @@ if(file_exists("config.json")){
     }else{goto login;}
 }
 daftar:
-echo "| Masukan Nomor HP: ";
+echo "|  Lebokno Nomor HPmu COK : ";
 $nomorhp = trim(fgets(STDIN));
 $nomorhp = "\"$nomorhp\"";
 
@@ -77,7 +77,7 @@ if($status == "00"){
 }else{echo "| Gagal"; die;}
 
 otp:
-echo "| Masukan KODE OTP: ";
+echo "| LEBOKNO KODE OTP: ";
 $otp = trim(fgets(STDIN));
 $otp = "\"$otp\"";
 $url_verif_otp = "https://api.alfagift.id/v1/otp/verify";
