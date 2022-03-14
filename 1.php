@@ -24,28 +24,25 @@ $deviceid= "$random1-936d-974b-a9ef-$random2$random3";
 $deviceid2 = "\"$deviceid\"";
 echo "\n";
 echo "\n";
-echo "| ALFAGIFT AKUN GENERATOR!! DNS TEAM \n";
-echo "| Bismillah , \n";
-echo "| Gak Usah bayar Gratis gawe Nawak ewed \n";
-echo "| Salam Sukses \n";
-echo "| DNS PUSAT \n";
-echo "| --------------------------- \n";
+echo "|## DNS PUSAT di ALFAGIFT ACCOUNT GENERATOR!!## \n";
+echo "|  Rebuild by DNS TEAM \n";
+echo "| SELAMAT BEKERJA DAN YANG RUKUN \n";
+echo "| NUWUS HEBAK \n";
 if(file_exists("config.json")){
     $arr2 = json_decode(file_get_contents('config.json'), true);
     $token = $arr2['token'];
     $memberid = $arr2['id'];
     $hp = $arr2['hp'];
-    echo "| Umak ues login gawe nomer hp $hp \n";
-    echo "| 1. Login \n";
-    echo "| 2. Daftar \n";
+    echo "| umak ues login ngawe nomor $hp \n";
+    echo "| 1. Daftar \n";
     echo "| Pilih: ";
     $pilih = trim(fgets(STDIN));
-    if($pilih !== '1'){
+    if($pilih !== '0'){
         goto daftar;
     }else{goto login;}
 }
 daftar:
-echo "|  Lebokno Nomor HPmu COK : ";
+echo "| ublemno Nomor HPmu  boss: ";
 $nomorhp = trim(fgets(STDIN));
 $nomorhp = "\"$nomorhp\"";
 
@@ -55,7 +52,7 @@ $header_otp = array(
     "accept-language: id",
     "versionname: 4.0.30",
     "versionnumber: 403016",
-    "devicemodel: Xiaomi Redmi Note 8",
+    "devicemodel: Xiaomi Redmi Note 5",
     "packagename: com.alfamart.alfagift",
     "signature: 6E:41:03:61:A5:09:55:05:B6:84:84:C9:75:0B:89:56:5D:1D:41:C7",
     "latitude: 0.0",
@@ -77,7 +74,7 @@ if($status == "00"){
 }else{echo "| Gagal"; die;}
 
 otp:
-echo "| LEBOKNO KODE OTP: ";
+echo "| LEBOKNO KODE OTP COK: ";
 $otp = trim(fgets(STDIN));
 $otp = "\"$otp\"";
 $url_verif_otp = "https://api.alfagift.id/v1/otp/verify";
@@ -96,11 +93,11 @@ if($status_login !== "00"){
 
 
 $url_daftar = "https://api.alfagift.id/v1/account/member/create";
-$random_name = "masjava"." ".substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 4);
+$random_name = "Aziz"." ".substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 4);
 $random_email = substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 7);
 $random_name = "\"$random_name\"";
 $random_email = "\"$random_email@gmail.com\"";
-$data_create = '{"address":"","birthDate":"1991-10-11","debug":false,"deviceId":'.$deviceid2.',"email":'.$random_email.',"firstName":"","fullName":'.$random_name.',"gender":"F","lastName":"","latitude":0,"longitude":0,"maritalStatus":"M","password":"akun1212","phone":'.$nomorhp.',"postCode":"","registerPonta":true,"token":'.$token2.'}';
+$data_create = '{"address":"","birthDate":"1991-10-11","debug":false,"deviceId":'.$deviceid2.',"email":'.$random_email.',"firstName":"","fullName":'.$random_name.',"gender":"F","lastName":"","latitude":0,"longitude":0,"maritalStatus":"M","password":"zk168169","phone":'.$nomorhp.',"postCode":"","registerPonta":true,"token":'.$token2.'}';
 $create_akun = curl($url_daftar,$header_otp,$data_create);
 $put = file_put_contents('createakunalfa.txt',$create_akun);
 $create_akun = json_decode($create_akun,true);
@@ -116,10 +113,10 @@ if($status_create !== "00"){
     $token = $create_akun['status']['token'];
     $id_ponta = $create_akun['member']['ponta']['accountCard'];
     $no_hp = $create_akun['member']['ponta']['phoneNumber'];
-    echo "| Sukses daftar!!! \n";
-    echo "| Nomer hp $no_hp dan password MantapJiwa \n";
+    echo "| SUKSES DAFTAR BOSS SENG RUKUN !!! \n";
+    echo "| Nomor HPMU $no_hp La passwordne zk168169 \n";
     echo "| Member Ponta $id_ponta \n";
-    echo "| Loading voucher \n";
+    echo "| Loading voucher..sek entenono!!!\n";
     sleep(4);
     $arr1 = ["token"=>$token,"id"=>$memberid, "hp"=>$no_hp];
     file_put_contents("config.json",json_encode($arr1));
@@ -139,7 +136,7 @@ $heder_jadi = array(
     "accept-language: id",
     "versionname: 4.0.30",
     "versionnumber: 403016",
-    "devicemodel: Xiaomi Redmi Note 8",
+    "devicemodel: Xiaomi Redmi Note 5",
     "packagename: com.alfamart.alfagift",
     "signature: 6E:41:03:61:A5:09:55:05:B6:84:84:C9:75:0B:89:56:5D:1D:41:C7",
     "latitude: 0.0",
@@ -158,10 +155,10 @@ $heder_jadi = array(
  if($status == "00"){
     $total_voucher = $login['totalVouchers'];
     if($total_voucher == null){
-        echo "| Voucher Kosong!!! \n";
+        echo "| Yaaahh VoucherE kosONG COK :( !!! \n";
         
     }elseif($total_voucher !== null){
-        echo "| Total voucher = $total_voucher \n";
+        echo "| Total voucherna = $total_voucher \n";
         $voucher = $login['vouchers'];
         print_r($voucher);
         
