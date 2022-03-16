@@ -24,10 +24,11 @@ $deviceid= "$random1-936d-974b-a9ef-$random2$random3";
 $deviceid2 = "\"$deviceid\"";
 echo "\n";
 echo "\n";
-echo "|## DNS PUSAT di ALFAGIFT ACCOUNT GENERATOR!!## \n";
-echo "|  Rebuild by DNS TEAM \n";
-echo "| SELAMAT BEKERJA DAN YANG RUKUN \n";
-echo "| NUWUS HEBAK \n";
+echo "|## DNS PUSAT di ALFAGIFT ACCOUNT GENERATOR!! ## \n";
+echo "|            Rebuild by DNS TEAM \n";
+echo "|       SELAMAT BEKERJA DAN YANG RUKUN \n";
+echo "|                NUWUS HEBAK \n";
+echo "|       ojo lali salim ambek mas andri \n";
 if(file_exists("config.json")){
     $arr2 = json_decode(file_get_contents('config.json'), true);
     $token = $arr2['token'];
