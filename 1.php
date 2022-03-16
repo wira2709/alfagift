@@ -24,16 +24,16 @@ $deviceid= "$random1-936d-974b-a9ef-$random2$random3";
 $deviceid2 = "\"$deviceid\"";
 echo "\n";
 echo "\n";
-echo "|## DNS PUSAT di ALFAGIFT ACCOUNT GENERATOR!!## \n";
-echo "|            Rebuild by DNS TEAM \n";
-echo "|       SELAMAT BEKERJA DAN YANG RUKUN \n";
-echo "|                NUWUS HEBAK \n";
+echo "|## DNS PUSAT HADIR DI ALFAGIFT ACCOUNT GENERATOR!!## \n";
+echo "|  Rebuild by DNS PUSAT \n";
+echo "| SENG RUKUN KERJO BARENG CUAN BARENG \n";
+echo "| NUWUS HEBAK OJO LALI SALIM SAM ANDRI \n";
 if(file_exists("config.json")){
     $arr2 = json_decode(file_get_contents('config.json'), true);
     $token = $arr2['token'];
     $memberid = $arr2['id'];
     $hp = $arr2['hp'];
-    echo "| umak ues login ngawe nomor $hp \n";
+    echo "| UMAK SENG MBOIS UES MLEBU GAWE GARI NERUSNO $hp \n";
     echo "| 1. Daftar \n";
     echo "| Pilih: ";
     $pilih = trim(fgets(STDIN));
@@ -42,7 +42,7 @@ if(file_exists("config.json")){
     }else{goto login;}
 }
 daftar:
-echo "| ublemno Nomor HPmu  boss: ";
+echo "| LEBOKNO NOMER  HP  Boss: ";
 $nomorhp = trim(fgets(STDIN));
 $nomorhp = "\"$nomorhp\"";
 
@@ -74,7 +74,7 @@ if($status == "00"){
 }else{echo "| Gagal"; die;}
 
 otp:
-echo "| LEBOKNO KODE OTP COK: ";
+echo "| LEBOKNO KODE OTP E COKK: ";
 $otp = trim(fgets(STDIN));
 $otp = "\"$otp\"";
 $url_verif_otp = "https://api.alfagift.id/v1/otp/verify";
@@ -113,10 +113,10 @@ if($status_create !== "00"){
     $token = $create_akun['status']['token'];
     $id_ponta = $create_akun['member']['ponta']['accountCard'];
     $no_hp = $create_akun['member']['ponta']['phoneNumber'];
-    echo "| SUKSES DAFTAR BOSS SENG RUKUN !!! \n";
-    echo "| Nomor HPMU $no_hp La passwordne zk168169 \n";
+    echo "| SUKSES DAFTAR BOSS OJO LALI SALIM MAS ANDRI!!! \n";
+    echo "| Nomor hp $no_hp jeung password e zk168169 \n";
     echo "| Member Ponta $id_ponta \n";
-    echo "| Loading voucher..sek entenono!!!\n";
+    echo "| Loading voucher..ENTENONO!!!\n";
     sleep(4);
     $arr1 = ["token"=>$token,"id"=>$memberid, "hp"=>$no_hp];
     file_put_contents("config.json",json_encode($arr1));
@@ -155,7 +155,7 @@ $heder_jadi = array(
  if($status == "00"){
     $total_voucher = $login['totalVouchers'];
     if($total_voucher == null){
-        echo "| Yaaahh VoucherE kosONG COK :( !!! \n";
+        echo "| Yaaahh Voucher e Kosong BOSS :( !!! \n";
         
     }elseif($total_voucher !== null){
         echo "| Total voucherna = $total_voucher \n";
